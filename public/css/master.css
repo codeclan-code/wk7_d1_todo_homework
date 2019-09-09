@@ -1,8 +1,10 @@
-#app {
+#app, h1 {
   width: 60%;
   margin: 0 auto;
   font-family: 'Lato', sans-serif;
 }
+
+
 
 ul {
   margin: 0;
@@ -29,13 +31,13 @@ li button {
   cursor: pointer;
 }
 
-li.purchased {
-  border: 2px solid #1a681e;
-  color: #1a681e;
+li.priority {
+  /* border: 2px solid #1a681e; */
+  border: 2px solid #f2360c;
 }
 
-li.notPurchased {
-  border: 2px solid #f2360c;
+li.notPriority {
+  border: 2px solid #1a681e;
 }
 
 input[type="text"] {
