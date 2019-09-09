@@ -9,13 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
         {name: "Clean bathroom", priority: true},
         {name: "Car's MOT", priority: false},
       ],
-      newItem: ""
+      newItem: "",
+      priority: ""
     },
     methods: {
       saveNewItem: function(){
-        this.items.push({ //MODIFIED
+        this.items.push({
           name: this.newItem,
-          priority: false
+          priority: this.priority
         });
         this.newItem = "";
       }

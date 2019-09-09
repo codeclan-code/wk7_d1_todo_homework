@@ -12,19 +12,20 @@
   <h1>ToDo's</h1>
   <div id="app">
     <input type="text" v-model="newItem" />
-    <button v-on:click="saveNewItem">Add New Item</button>
-    <ul>
-      <!-- <li v-for="item in items">
-      <span>{{ item.name }}</span>
-      <span v-if="item.priority">High Priority!</span>
-    </li> -->
-    <li v-for="(item, index) in items" v-bind:class="item.priority ? 'priority':'notPriority'">
-      <span>{{ item.name }}</span>
-      <span v-if="item.priority"> - High Priority!</span>
 
-      <!-- <button v-if="!item.priority" v-on:click="buyItem(index)">Priority</button> -->
-    </li>
-  </ul>
-</div>
-</body>
-</html>
+    <span><label for="priority">High</label>
+      <input type="radio" name="priority" v-bind:value="true" v-model="priority" />
+      <label for="priority">Low</label>
+      <input type="radio" name="priority" v-bind:value="false" v-model="priority"/></span>
+
+      <button v-on:click="saveNewItem">Save Item</button>
+      
+      <ul>
+        <li v-for="(item, index) in items" v-bind:class="item.priority ? 'priority':'notPriority'">
+          <span>{{ item.name }}</span>
+          <span v-if="item.priority "> High Priority!</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+  </html>
